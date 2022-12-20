@@ -1,34 +1,43 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<HTML>
-  <HEAD>
-    <TITLE>Examples of margins, padding, and borders</TITLE>
-    <STYLE type="text/css">
-      UL { 
-        background: yellow; 
-        margin: 12px 12px 12px 12px;
-        padding: 3px 3px 3px 3px;
-                                     /* No borders set */
-      }
-      LI { 
-        color: white;                /* text color is white */ 
-        background: blue;            /* Content, padding will be blue */
-        margin: 12px 12px 12px 12px;
-        padding: 12px 0px 12px 12px; /* Note 0px padding right */
-        list-style: none             /* no glyphs before a list item */
-                                     /* No borders set */
-      }
-      LI.withborder {
-        border-style: dashed;
-        border-width: medium;        /* sets border width on all sides */
-        border-color: lime;
-      }
-    </STYLE>
-  </HEAD>
-  <BODY>
-    <UL>
-      <LI>First element of list
-      <LI class="withborder">Second element of list is
-           a bit longer to illustrate wrapping.
-    </UL>
-  </BODY>
-</HTML>
+<html>
+<head>
+
+<script async="async" src="https://www.google.com/adsense/search/ads.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+  (function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
+  arguments)},g[o]['t']=1*new Date})(window,'_googCsa');
+</script>
+
+</head>
+
+<body>
+
+<div id="afscontainer1"></div>
+<script type="text/javascript" charset="utf-8">
+
+var pageOptions = {
+  'pubId' : 'test client ID', // Enter your own client-ID here
+  'query' : 'flowers', // User query for this page
+  'styleId': '7824176615' // Enter your own style ID here
+};
+
+var adblock1 = {
+  'container' : 'afscontainer1',
+  'width' : 700
+};
+
+var adblock2 = {
+  'container' : 'afscontainer2',
+  'width' : 700
+};
+
+_googCsa('ads', pageOptions, adblock1, adblock2);
+</script>
+
+<p>Search result 1</p>
+<p>Search result 2</p>
+<p>Search result 3</p>
+
+<div id="afscontainer2"></div>
+</body>
+</html>
