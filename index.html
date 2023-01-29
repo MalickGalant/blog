@@ -1,43 +1,51 @@
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <title>Google Tag Manager & automatic cookie blocking</title>
 
-<script async="async" src="https://www.google.com/adsense/search/ads.js"></script>
+    <!-- Google Consent Mode -->
+    <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500
+      });
+      gtag("set", "ads_data_redaction", true);
+    </script>
+    <!-- End Google Consent Mode-->
 
-<script type="text/javascript" charset="utf-8">
-  (function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
-  arguments)},g[o]['t']=1*new Date})(window,'_googCsa');
-</script>
+    <!-- Google Tag Manager -->
+    <script data-cookieconsent="ignore">
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXX');</script>
+    <!-- End Google Tag Manager -->
 
-</head>
+    <!-- Cookiebot CMP-->
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="abcdef12-3456-7890-abcd-ef1234567890"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+    <!-- End Cookiebot CMP -->
 
-<body>
+    ...
 
-<div id="afscontainer1"></div>
-<script type="text/javascript" charset="utf-8">
+  </head>
+  <body>
 
-var pageOptions = {
-  'pubId' : 'test client ID', // Enter your own client-ID here
-  'query' : 'flowers', // User query for this page
-  'styleId': '7824176615' // Enter your own style ID here
-};
+    ...
 
-var adblock1 = {
-  'container' : 'afscontainer1',
-  'width' : 700
-};
-
-var adblock2 = {
-  'container' : 'afscontainer2',
-  'width' : 700
-};
-
-_googCsa('ads', pageOptions, adblock1, adblock2);
-</script>
-
-<p>Search result 1</p>
-<p>Search result 2</p>
-<p>Search result 3</p>
-
-<div id="afscontainer2"></div>
-</body>
+  </body>
 </html>
